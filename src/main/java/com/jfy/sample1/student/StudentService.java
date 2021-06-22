@@ -1,5 +1,6 @@
 package com.jfy.sample1.student;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -11,11 +12,12 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+
 @Service
 public class StudentService {
 
     private final StudentRepository studentRepository;
-    @Autowired
+   @Autowired
 
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
@@ -55,6 +57,7 @@ public class StudentService {
         if(name!=null && name.length()>0 &&
         !Objects.equals(student.getName(),name)){
             student.setName(name);
+
         }
 //        else { throw new IllegalStateException("name is same no need to update"); }
 //        throw new IllegalStateException("name is same");
